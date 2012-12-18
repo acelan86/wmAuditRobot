@@ -7,7 +7,7 @@
   }],
   "description" : "百度网盟审核小助手，帮你快速处理审核问题",
   "name": "百度网盟审核助手 by acelan",
-  "version": "2.1",
+  "version": "2.2",
   "permissions": [ "cookies", "http://*/*"],
   "icons" : {
     "16" : "icon_16.png",
