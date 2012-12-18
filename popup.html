@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sina cookie分析</title>
+    <style>
+      body{
+        font-size:12px;
+        width:500px;
+        overflow-x:hidden;
+      }
+      h2{
+        font-weight: normal;
+        font-size:14px;
+      }
+      table {
+        width:100%;
+      }
+      th, td{
+        text-align: left;
+      }
+
+      input[id="seeid"]{
+        border:1px solid #ccc;
+        height:24px;
+        line-height:24px;
+        background:#fff;
+      }
+      input[id="seeid"]:focus{
+        outline:none;
+      }
+      input[type="submit"]{
+          border: 1px solid #CCC;
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+          border-bottom-color: #B3B3B3;
+          border-radius: 4px;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
+          display: inline-block;
+          padding: 4px 10px 4px;
+          margin: 0;
+          margin-left:4px;
+          font-size: 13px;
+          line-height: 18px;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0 1px 1px 
+          rgba(255, 255, 255, 0.75);
+          vertical-align: middle;
+          cursor: pointer;
+          background-color:#0074cc;
+          background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+          background-image:-webkit-linear-gradient(top, #0088cc, #0055cc);
+      }
+      input[type="button"]:hover{
+          background-color:#0055cc;
+      }
+
+      .tab{
+        height:27px;
+        border-bottom:1px solid #ccc;
+        margin:0;
+        padding:0;
+        margin-top:10px;
+      }
+      .tab li{
+          border: 1px solid #CCC;
+          border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+          border-bottom:none;
+          border-bottom-color: #B3B3B3;
+          border-radius: 4px 4px 0px 0px;
+          display: inline-block;
+          padding: 4px 10px 4px;
+          margin: 0;
+          margin-left:4px;
+          font-size: 13px;
+          line-height: 18px;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0 1px 1px 
+          rgba(255, 255, 255, 0.75);
+          vertical-align: middle;
+          cursor: pointer;
+          background-color:#0074cc;
+          background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#cccc), to(#efefef));
+          background-image:-webkit-linear-gradient(top, #ccc, #efefef);
+      }
+      .tab li.selected{
+          background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+          background-image:-webkit-linear-gradient(top, #0088cc, #0055cc);
+      }
+      .tabpanel{
+        margin:10px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div>
+      <form action="#" method="POST" id="see">
+        <input id="seeid" type="text" style="width:250px" placeholder="输入你想偷窥的人的SINAGLOBAL"/>
+        <input type="submit" value="偷窥一下" />
+      </form>
+    </div>
+    <div id="idwrap"></div>
+    <ul class="tab">
+      <li class="selected" data-idx="0">Tag云</li>
+      <li data-panel="cookie" data-idx="1">列表</li>
+    </ul> 
+    <div id="tag" class="tabpanel"></div>
+    <div id="cookie" class="tabpanel" style="display:none;"></div>
+  </body>
+</html>
