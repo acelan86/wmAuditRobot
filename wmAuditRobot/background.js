@@ -23,6 +23,7 @@ var profileManager = (function () {
 chrome.browserAction.onClicked.addListener(function(tab) {
     var profile = profileManager.getProfile();
     if (tab.url.indexOf("http://beidou.baidu.com/auditmanager") === 0) {
+        //chrome.pageAction.show(tab.id);
     //if (tab.url.indexOf("http://") == 0){
         chrome.tabs.executeScript(null, {code:"window.wmAuditRobot.open(" + profile.delay + ");"});
     }

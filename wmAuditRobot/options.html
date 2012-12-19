@@ -7,25 +7,43 @@
             body, html{
                 padding:0px;
                 margin:0px;
-                font-size:14px;
+            }
+            body {
+                font-family: arial, sans-serif;
+                margin: 10px;
+                background: #EBEFF9;
+                font-size: 13px;
             }
             .form-wrap{
-                width:350px;
-                margin:0px auto;
+                background-color: white;
+                border: 3px solid #BEC9CE;
+                border-bottom-left-radius: 20px 20px;
+                border-bottom-right-radius: 20px 20px;
+                border-top-left-radius: 20px 20px;
+                border-top-right-radius: 20px 20px;
+                padding: 30px;
+                text-align: left;
+                margin: 50px auto 20px auto;
+                height: auto;
+                width: 500px;
             }
-            .form-body{
-                border-radius: 2px;
-                background:#efefef;
-                padding:10px;
-                margin:10px;
+            .form-row{
+                padding:0px 55px;
             }
-            .form-body li{
-                list-style: none;
-                line-height: 30px;
+            h4 {
+                padding-left: 0.5em;
+                border-bottom: 2px dotted #C3C3C3;
+                color: #333;
+                line-height: 28px;
+                font-size: 15px;
             }
             h2{
-                font-size:20px;
+                margin: 0px;
+                font-size:30px;
                 padding:0px 10px;
+                padding-left:80px;
+                background:url('icon_48.png') no-repeat left center;
+                line-height:60px;
             }
             input[type="submit"],
             input[type="reset"]{
@@ -58,7 +76,7 @@
           }
           .form-footer{
             text-align: right;
-            margin:10px;
+            margin-top:40px;
           }
           .info{
             background:lightyellow;
@@ -67,6 +85,7 @@
             padding:4px 10px;
             margin:0px 10px;
             display:none;
+            line-height:14px;
           }
         </style>
     </head>
@@ -74,17 +93,21 @@
         <div class="form-wrap">
             <form action="#" id="configForm">
             <h2 class="form-header">配置<span class="info" id="info"></span></h2>
-            <ul class="form-body">
-                <li>每隔<span class="delay-range-box"><input id="delayRange" type="range" value="1" step="1" max="10" min="1" /><span id="delay">1</span>秒</span>打开一个标签页</li>
-                <!--<li>默认每页显示
-                    <select id="pageSize" value="20">
+            <div class="form-body">
+                <h4>打开标签频率设置：</h4>
+                <div class="form-row">
+                    <input id="delayRange" type="range" value="1" step="1" max="10" min="1" /><span id="delay">1</span>秒</span>
+                </div>
+                <h4>每页显示条数设置：</h4>
+                <div class="form-row">
+                    <select disabled id="pageSize" value="20">
                         <option value="20">20</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
                     </select>
-                    条数据
-                </li>-->
-            </ul>
+                    条 (暂时不可用)
+                </div>
+            </div>
             <div class="form-footer"><input id="okBtn" type="submit" value="确定"/><input type="reset" value="重置" /></div>
             </form>
         </div>
